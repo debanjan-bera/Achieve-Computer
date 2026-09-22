@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Monitor, 
-  Languages, 
-  CalendarClock, 
-  Users, 
-  WalletCards, 
+import {
+  Monitor,
+  Languages,
+  CalendarClock,
+  Users,
+  WalletCards,
   FileCheck2,
   Sparkles,
   Check
@@ -18,12 +18,12 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 32 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' as const } },
 };
 
 const headerVariants = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' as const } },
 };
 
 export const WhyChooseUs: React.FC = () => {
@@ -69,7 +69,7 @@ export const WhyChooseUs: React.FC = () => {
   return (
     <section id="why-us" className="py-20 bg-[#FFFCF5] border-y border-[#E2E8F0]">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        
+
         {/* Header */}
         <motion.div
           className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16"

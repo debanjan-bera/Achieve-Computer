@@ -17,7 +17,7 @@ export const AboutSir: React.FC<AboutSirProps> = ({ onOpenContact }) => {
             initial={{ opacity: 0, x: -48 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.65, ease: 'easeOut' }}
           >
             <div className="relative w-full max-w-[380px]">
               {/* Decorative yellow offset frame */}
@@ -47,7 +47,7 @@ export const AboutSir: React.FC<AboutSirProps> = ({ onOpenContact }) => {
             initial={{ opacity: 0, x: 48 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.65, delay: 0.1, ease: 'easeOut' }}
           >
             
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF3BF] border border-[#F6C945]/60 text-[#172554] text-xs font-bold">
@@ -71,7 +71,7 @@ export const AboutSir: React.FC<AboutSirProps> = ({ onOpenContact }) => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.45, delay: 0.25, ease: 'easeOut' }}
               >
                 <div className="w-10 h-10 rounded-xl bg-[#172554]/5 text-[#172554] flex items-center justify-center font-bold mb-3">
                   <HeartHandshake size={20} />
@@ -87,7 +87,7 @@ export const AboutSir: React.FC<AboutSirProps> = ({ onOpenContact }) => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.45, delay: 0.35, ease: 'easeOut' }}
               >
                 <div className="w-10 h-10 rounded-xl bg-[#15803D]/10 text-[#15803D] flex items-center justify-center font-bold mb-3">
                   <Award size={20} />

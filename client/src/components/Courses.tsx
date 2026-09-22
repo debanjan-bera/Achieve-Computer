@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
   FileSpreadsheet,
@@ -131,7 +131,7 @@ export const Courses: React.FC<CoursesProps> = ({ onSelectCourse }) => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 32 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } as const },
   };
 
   const containerVariants = {
@@ -149,7 +149,7 @@ export const Courses: React.FC<CoursesProps> = ({ onSelectCourse }) => {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.55, ease: 'easeOut' }}
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF3BF] border border-[#F6C945]/60 text-[#172554] text-xs font-bold mb-3">
             <Sparkles size={13} />

@@ -33,7 +33,7 @@ const childVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.5, ease: 'easeOut' as const },
   },
 };
 
@@ -67,7 +67,7 @@ export const AnimatedSection: React.FC<AnimatedSectionProps> = ({
       initial={initial}
       whileInView={animate}
       viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
     >
       {children}
     </motion.div>

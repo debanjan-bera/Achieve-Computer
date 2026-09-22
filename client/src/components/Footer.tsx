@@ -104,7 +104,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
           }}
           transition={{
             duration: 0.7,
-            ease: [0.22, 1, 0.36, 1],
+            ease: 'easeOut',
           }}
           className=" relative overflow-hidden rounded-[28px] border border-[#F6C945]/70 bg-[#FFF8DC] px-6 py-12 sm:px-10 sm:py-14 lg:px-16"
         >
@@ -834,48 +834,5 @@ const ContactItem: React.FC<ContactItemProps> = ({
       </div>
 
     </div>
-  );
-};
-
-
-interface SocialButtonProps {
-  icon: React.ElementType;
-  label: string;
-}
-
-const SocialButton: React.FC<SocialButtonProps> = ({
-  icon: Icon,
-  label,
-}) => {
-  return (
-    <motion.a
-      href="#"
-      aria-label={label}
-      whileHover={{
-        y: -3,
-      }}
-      whileTap={{
-        scale: 0.95,
-      }}
-      className="
-        flex
-        h-10
-        w-10
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-[#E2E8F0]
-        bg-[#F8FAFC]
-        text-[#64748B]
-        transition-colors
-        duration-200
-        hover:border-[#BFDBFE]
-        hover:bg-[#EFF6FF]
-        hover:text-[#1D4ED8]
-      "
-    >
-      <Icon size={17} />
-    </motion.a>
   );
 };

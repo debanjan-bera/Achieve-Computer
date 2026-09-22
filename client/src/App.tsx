@@ -4,7 +4,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Stats } from './components/Stats';
 import { Courses } from './components/Courses';
-import { ContactAdmission } from './components/ContactAdmission';
 import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
 import { LearningProcess } from './components/LearningProcess';
@@ -42,7 +41,7 @@ export function App() {
         className="flex-1"
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.55, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.55, delay: 0.15, ease: 'easeOut' }}
       >
         {/* 2. Hero Section */}
         <Hero onOpenContact={() => handleOpenContact()} />
