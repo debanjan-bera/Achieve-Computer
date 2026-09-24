@@ -21,6 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
   const navLinks = [
     { label: 'Home', href: '#hero' },
     { label: 'Courses', href: '#courses' },
+    { label: 'Why Us', href: '#why-us' },
     { label: 'About', href: '#about-sir' },
   ];
 
@@ -85,7 +86,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
               onClick={onOpenContact}
               className="px-5 py-2.5 bg-[#F6C945] hover:bg-[#eab308] text-[#0F172A] font-bold text-sm rounded-xl transition-all shadow-sm hover:shadow active:scale-95 flex items-center gap-1.5 cursor-pointer"
             >
-              <span>Contact Us</span>
+              <span>Talk to Sir</span>
               <ChevronRight size={16} />
             </button>
           </div>

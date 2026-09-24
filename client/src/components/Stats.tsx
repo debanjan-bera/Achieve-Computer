@@ -53,7 +53,7 @@ const statItems = [
   },
   {
     icon: Star,
-    numericEnd: 80,
+    numericEnd: 20,
     suffix: '+',
     label: 'Years of Experience',
     sublabel: 'Trusted teaching since decades',

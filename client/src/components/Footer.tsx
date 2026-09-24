@@ -11,7 +11,6 @@ import {
   CheckCircle2,
 
 } from 'lucide-react';
-import { HandwrittenText } from './Handwritten';
 
 interface FooterProps {
   onOpenContact: () => void;
@@ -184,7 +183,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
           <div className="relative z-10 mx-auto max-w-3xl text-center">
             {/* Left handwritten message */}
 
-            <HandwrittenText
+            {/* <HandwrittenText
               lines={[
                 'Skills Today',
                 'Brighter Tomorrow',
@@ -195,34 +194,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
     left-10
     rotate-[-5deg]
     lg:left-12
-  "
-            />
+  " */}
+            {/* /> */}
 
             {/* Right handwritten message */}
 
-            <HandwrittenText
+            {/* <HandwrittenText
               lines={[
                 'Your Future Starts',
                 'Here',
               ]}
               delay={0.7}
-              className="
-    right-8
-    top-28
-    rotate-[4deg]
-    text-[#17233C]
-    lg:right-12
-  "
-            />
+              className=" right-8 top-28 rotate-[4deg] text-[#17233C] lg:right-12 "
+            /> */}
             <p
-              className="
-                mb-2
-                text-[11px]
-                font-bold
-                uppercase
-                tracking-[0.3em]
-                text-[#1E3A8A]
-                sm:text-xs
+              className=" mb-2 text-[11px] font-bold uppercase tracking-[0.3em] text-[#1E3A8A] sm:text-xs
               "
             >
               Learn Today • Build Tomorrow
@@ -423,16 +409,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               <div className="flex items-center gap-3">
 
                 <div
-                  className="
-                    flex
-                    h-11
-                    w-11
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-[#FFF4C2]
-                    text-[#17233C]
-                  "
+                  className=" flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFF4C2] text-[#17233C]"
                 >
                   <Flame
                     size={23}
@@ -459,57 +436,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               {/* Description */}
 
               <p
-                className="
-                  mt-6
-                  max-w-sm
-                  text-sm
-                  leading-7
-                  text-[#64748B]
-                "
+                className="mt-6 max-w-sm text-sm leading-7 text-neutral-800"
               >
                 “Learn computers easily, practice hands-on,
                 and build your future with confidence.”
               </p>
 
               <p
-                className="
-                  mt-4
-                  max-w-sm
-                  text-sm
-                  leading-6
-                  text-[#64748B]
-                "
+                className="mt-4 max-w-sm text-sm leading-6 text-neutral-700"
               >
                 A trusted local computer training centre for
                 school, college students and career aspirants.
               </p>
 
-              {/* Social links */}
-
-              <div className="mt-6 flex items-center gap-3">
-
-                {/* <SocialButton
-                //   icon={Facebook}
-                  label="Facebook"
-                />
-
-                <SocialButton
-                //   icon={Instagram}
-                  label="Instagram"
-                />
-
-                <SocialButton
-                //   icon={Youtube}
-                  label="YouTube"
-                /> */}
-
-              </div>
 
             </motion.div>
 
-            {/* =================================================
-                QUICK LINKS
-            ================================================= */}
 
             <motion.div
               initial={{
@@ -541,17 +483,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                     key={link.label}
                     type="button"
                     onClick={() => scrollTo(link.href)}
-                    className="
-                      w-fit
-                      cursor-pointer
-                      text-left
-                      text-sm
-                      text-[#64748B]
-                      transition-all
-                      duration-200
-                      hover:translate-x-1
-                      hover:text-[#1D4ED8]
-                    "
+                    className=" w-fit cursor-pointer text-left text-sm text-neutral-800 transition-all duration-200 hover:translate-x-1 hover:text-[#1D4ED8]"
                   >
                     {link.label}
                   </button>
@@ -595,18 +527,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                     key={course}
                     type="button"
                     onClick={() => scrollTo('#courses')}
-                    className="
-                      w-fit
-                      cursor-pointer
-                      text-left
-                      text-sm
-                      leading-5
-                      text-[#64748B]
-                      transition-all
-                      duration-200
-                      hover:translate-x-1
-                      hover:text-[#1D4ED8]
-                    "
+                    className=" w-fit cursor-pointer text-left text-sm leading-5 text-neutral-800 transition-all duration-200 hover:translate-x-1 hover:text-[#1D4ED8]"
                   >
                     {course}
                   </button>
@@ -643,7 +564,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                 Contact & Address
               </FooterHeading>
 
-              <div className="space-y-5">
+              <div className="space-y-5 ">
 
                 {/* Address */}
 
@@ -651,11 +572,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                   icon={MapPin}
                   iconClass="bg-[#EFF6FF] text-[#1D4ED8]"
                 >
-                  <span>
+                  <span className='text-neutral-800'>
                     Nirmani Dutta Lane,
 
                     Kolkata, West Bengal
                   </span>
+                  <br />
+                  <a
+                    href="https://maps.app.goo.gl/xYiHYwqmFdiGcjK26"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='text-neutral-800 hover:text-[#1D4ED8]'
+                  >
+                    View on Google Maps →
+                  </a>
                 </ContactItem>
 
                 {/* Phone */}
@@ -668,7 +598,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                     href="tel:+919876543210"
                     className="
                       transition-colors
-                      hover:text-[#1D4ED8]
+                      text-neutral-800
+                      hover:text-[#B77900]
+                      
                     "
                   >
                     +91 98765 43210
@@ -687,7 +619,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                     rel="noopener noreferrer"
                     className="
                       transition-colors
-                      hover:text-[#1D4ED8]
+                      text-neutral-800
+                      hover:text-[#15803D]
                     "
                   >
                     WhatsApp: +91 98765 43210

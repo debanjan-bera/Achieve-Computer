@@ -13,18 +13,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
   };
 
   return (
-    <section id="hero" className="relative md:h-[92vh] bg-yellow-50/30 pb-16 md:pb-24 pt-12 md:pt-22 overflow-hidden bg-[#fafafa]">
+    <section id="hero" className="relative md:h-[92vh] bg-yellow-50/30 pb-16 md:pb-24 pt-9 md:pt-18 overflow-hidden bg-[#fafafa]">
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none" 
-           style={{
-             backgroundImage: 'linear-gradient(to right, #c2b9b9ff 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
-             backgroundSize: '40px 40px'
-           }}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none"
+        style={{
+          backgroundImage: 'linear-gradient(to right, #c2b9b9ff 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}
       />
-      
+
       <div className="max-w-[1240px] h-full mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -35,25 +35,25 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             {/* Top Pill */}
             <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-[#F6C945] bg-white shadow-sm">
               <span className="text-[#F6C945] text-lg">✨</span>
-              <span className="text-[#172554] font-bold text-[0.7rem] md:text-xs  font-bengali">হাতে-কলমে শেখা · আত্মবিশ্বাসে এগিয়ে যাওয়া</span>
+              <span className="text-[#172554] font-bold text-[0.8rem] md:text-sm  font-bengali">হাতে-কলমে শেখা · আত্মবিশ্বাসে এগিয়ে যাওয়া</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-[35px] sm:text-5xl lg:text-[50px] text-[#172554] font-bold tracking-tight leading-[1.3] font-bengali">
+            <h1 className="text-[2.7rem] sm:text-5xl lg:text-[55px] text-[#172554] font-extrabold tracking-tight font-bengali">
               কম্পিউটার শেখা
               <br />
-              হোক <span className="text-[#0052FF] highlight-yellow">সহজ</span>, সঠিক ও
+              হোক <span className="text-[#0052FF] highlight-yellow">সহজ</span>, নিজের গতিতে, নিজের
               <br />
-              আত্মবিশ্বাসের সঙ্গে।
+              মানুষের কাছে।
             </h1>
 
             {/* Subtext */}
-            <p className="text-base sm:text-[17px] text-[#475569] max-w-xl leading-relaxed font-medium font-bengali">
-              Achieve Computer Centre-এ Word, PowerPoint, Excel, Advanced Excel, IT File, Photoshop, CorelDRAW সহ বিভিন্ন Computer Skill শিখুন।
+            <p className="text-md sm:text-[20px] text-[#475569] max-w-xl font-bold font-bengali">
+              "প্রশ্ন করতে কখনও ভয় পেতে হবে না। যতক্ষণ না বুঝছেন, ততক্ষণ আমি আছি।"
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-4 md:pt-2">
               <button
                 onClick={onOpenContact}
                 className="w-full md:w-auto px-8 py-3.5 bg-[#F6C945] hover:bg-[#eab308] text-[#0F172A] font-bold text-base rounded-[6px] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 <span>Admission Now</span>
                 <ArrowRight size={20} />
               </button>
-              
+
               <button
                 onClick={scrollToCourses}
                 className="w-full md:w-auto px-8 py-3.5 bg-transparent hover:bg-[#172554]/5 text-[#172554] border-[2px] border-[#172554] font-bold text-base rounded-[6px] transition-all flex items-center justify-center cursor-pointer shadow-sm font-bengali"
@@ -78,16 +78,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative flex justify-center lg:justify-end mt-12 mx-4 md:mx-0 lg:mt-0"
+            className="relative flex justify-center lg:justify-end mt-12 mx-6 md:mx-0 lg:mt-0"
           >
             {/* Visual Container */}
             <div className="relative w-full max-w-[500px]">
-              
+
               {/* Yellow Background Box with Blue Border (Shadow) */}
               <div className="absolute -top-4 -left-5 w-[100%] h-[102%] bg-[#F6C945] rounded-[4px] border-[3px] border-[#172554] " />
 
               {/* Main Image Container */}
-              <div className="relative rounded-[4px] overflow-hidden bg-[#FFFFFF] border-[3px] border-[#172554] aspect-[4/3] ">
+              <div className="relative rounded-[4px] overflow-hidden bg-[#FFFFFF] border-[3px] border-[#172554] aspect-[4/4] md:aspect-[4/3]
+            ">
                 <img
                   src="/images/hero-student.jpg"
                   alt="Students learning computers at Achieve Computer Centre"
@@ -102,7 +103,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 transition={{ duration: 0.5, delay: 0.7 }}
                 className="absolute -top-5 -right-6 sm:-right-10 bg-[#172554] px-4 py-2 rounded-full shadow-lg z-10"
               >
-                <span className="text-white text-xs sm:text-sm font-bold tracking-wide">Small Batch - Better Care</span>
+                <span className="text-white text-xs sm:text-sm font-bold tracking-wide">Small Batch • Personal Attention</span>
               </motion.div>
 
               {/* Floating Badge 2: Bottom Left */}
@@ -121,7 +122,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-[#172554] leading-tight">100% Practical Training</div>
+                  <div className="text-sm font-bold text-[#172554] leading-tight">100% Market Oriented Training</div>
                   <div className="text-[11px] text-[#64748B] font-medium mt-0.5 font-bengali">প্রতিটি ক্লাসে নিজে কাজ করুন</div>
                 </div>
               </motion.div>
